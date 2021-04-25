@@ -1,0 +1,135 @@
+<!-- 
+        <div id="firstmodal" class="animated fadeIn">
+       
+            <div class="container col-md-5">
+        <div class="card mt-5" style="border: none;">
+            
+                 <h1 class="text-center mb-2 mt-2" style="font-size: 20px;">EDIT COURSE</h1>
+              <div class="card-body mt-3">
+                <form [formGroup]="angForm2">
+                  <input type="text" hidden name="id" formControlName="id">
+                  <div class="row">
+                      <div class="input-group mb-5 col-md-6">
+                        <input type="text" class="form-control pl-3"
+                           formControlName="name" placeholder="tutor's name" name="name">
+                      </div>                     
+                    
+                        <div class="input-group mb-5 col-md-6">
+                          <input type="text" class="form-control pl-3"
+                          name="course" formControlName="course" placeholder="Maths">
+                          
+                        </div>
+                  </div>
+                
+  
+                  <div class="row">
+                      <div class="input-group mb-5 col-md-6">
+                        <mat-form-field>
+                            <input matInput name="date" formControlName="date" [matDatepicker]="picker1">
+                             <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                             <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+                        <div class="input-group mb-5 col-md-6">
+                            <input type="text"
+                            class="form-control pl-3" formControlName="questNo" name="questNo" placeholder="20">
+                        </div>
+                  </div>
+  
+                  <div class="row justify-content-center">
+                    <div class="input-group mb-5 col-md-6">
+                        <input type="text"
+                        class="form-control pl-3" formControlName="time" name="time" placeholder="07:00AM">
+                      </div>
+    
+                </div>
+  
+                <div class="row justify-content-right">
+                  <div class="input-group col-md-3">
+                    <button type="submit" (click)="update()" mat-button color="primary">update</button>
+                  </div>
+
+                  <div class="input-group col-md-3">
+                    <button mat-button color="warn" id="cancel">Cancel</button>
+                  </div>
+                </div>
+
+              </form> 
+              </div>
+          </div>
+          </div>
+        
+        </div>
+      
+     -->
+
+
+
+     <div id="firstmodal">
+      <div class="container">
+           <div class="row mx-auto justify-content-center">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="text-center mt-3 mb-3">EDIT COURSE</h5>
+              <form [formGroup]="angForm2">
+                <input type="text" formControlName="course_id" hidden name="course_id">
+
+                   <div class="row">
+                    <div class="col-md-6">
+                      <mat-form-field appearance="fill">
+                        <mat-label>Tutor's Name</mat-label>
+                        <input matInput name="name" formControlName="name">
+                      </mat-form-field>
+                    </div>
+    
+                      <div class="col-md-6">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Course</mat-label>
+                          <input matInput name="course" formControlName="course">
+                        </mat-form-field>
+                      </div>
+                   </div>
+    
+                   <div class="row">
+                    <div class="col-md-6">
+                      <mat-form-field appearance="fill">
+                        <input matInput name="date" formControlName="date" [matDatepicker]="picker1">
+                         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                         <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                    </div>
+    
+                    <div class="col-md-6">
+                      <mat-form-field appearance="fill">
+                        <mat-label>No. of Question</mat-label>
+                        <input matInput name="questNo" formControlName="questNo">
+                      </mat-form-field>
+                    </div>
+                 </div>
+    
+                 <div class="row">
+                  <div class="col-md-6">
+                    <mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Time</mat-label>
+                      <input type="time" name="time" formControlName="time" matInput>
+                  </mat-form-field>
+                  </div>
+    
+               </div>
+  
+                   
+             <div class="mb-3">
+              <button mat-raised-button class="float-left" color="primary" (click)="update()"><span class="fa fa-plus fa-2x"></span></button>
+              <button mat-raised-button class="float-right" color="warn" id="cancel"><span class="fa fa-times fa-2x"></span></button>
+             </div>
+
+            </form>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    
+      

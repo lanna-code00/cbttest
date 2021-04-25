@@ -1,0 +1,39 @@
+
+   <section>				
+        <div id="container_demo" >
+            <a class="hiddenanchor" id="toregister"></a>
+            <a class="hiddenanchor" id="tologin"></a>
+            <div id="wrapper">
+                <div id="login" class="animate form">
+                    <form [formGroup]="angForm" (ngSubmit)="postdata()"> 
+                        <h1>Log In</h1> 
+
+                        <div *ngIf="incorrect" class="card-header bg-danger text-center text-white mt-2 mb-3 animated fadeInUp">
+                          <p class="mb-1 mt-1">Username or password is Incorrect</p>
+                       </div>
+
+                       <p> 
+                           <label for="password" class="youpasswd"> Your E-mail </label>
+                           <input id="password" autocomplete="off" name="password" [ngClass]="{ 'is-invalid': submitted && email.invalid }" formControlName="email" required="required" type="email"/> 
+                       </p>
+
+                        <p> 
+                          <label for="password" class="youpasswd"> Your identification </label>
+                          <input id="password" autocomplete="off" name="identification" [ngClass]="{ 'is-invalid': submitted && identification.invalid }" formControlName="identification" required="required" type="password" /> 
+                      </p>
+                        <p class="keeplogin"> 
+          <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+          <label for="loginkeeping">Keep me logged in</label>
+        </p>
+                        <p class="login button"> 
+                            <input type="submit" value="log in" /> 
+        </p>
+      </form>
+             
+                </div>
+</div>
+    </div>
+  </section>
+
+  
+  

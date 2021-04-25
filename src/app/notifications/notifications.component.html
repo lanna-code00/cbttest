@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row mx-auto justify-content-center">
+        <div class="col-md-6" *ngFor="let result of students_result">
+            <h4 class="mt-5 mb-3 text-center"><b>LIST OF QUALIFIED CANDIDATES</b></h4>
+            <div class="card">
+                <div class="card-image">
+                    <img src="../../assets/newpics/HP_Life Cert_331024_1.png">
+                    <span class="card-title" style="color: black; font-size: 10px; top: 65px; left: 185px;">{{result.firstname | uppercase}} {{result.lastname | uppercase}} {{result.surname | uppercase}}</span>
+
+                    <span class="card-title" style="color: black; font-size: 10px; top: 65px; left: 383px;">{{result.dates | date:'fullDate'}}</span>
+                </div>
+
+                <div class="card-action justify-content-center">
+                    <a href="#">ISSUE CERT</a>
+                </div>
+            </div>
+            <!-- <img class="card-img-top" src="../../assets/newpics/HP_Life Cert_331024_1.png" alt="Card image cap"> -->
+            <!-- <div class="card" style="border: 2px solid red">
+                <div>
+                   <span> <img src="../../assets/newpics/mainlogo.png" alt="logo" class="ml-3 m-3 mr-5" style="width: 70px; height: 70px; border-radius: 50%;" srcset=""> <b class="text-center mr-5" style="letter-spacing: 3px;"> CERTIFICATE OF COMPLETION</b></span>
+
+                   <div class="text-center">
+                       <h3 style="font-weight: 800; letter-spacing: 3px;">This is to certify that</h3>
+                    <span>
+                        <h4 style="text-decoration: underline; font-weight: 800;">{{result.firstname | uppercase}} {{result.lastname | uppercase}} {{result.surname | uppercase}}
+                        </h4>
+                    </span>
+                       <p>
+                           has completed his/her course on <b>{{result.course | uppercase}}</b><br><br>
+                           <span><b>ON</b></span>
+                    </p>
+                    
+                      <span><h4><b>{{result.dates | date:'fullDate'}}</b> With <b>{{result.scores}} Points</b></h4></span> 
+                   </div>
+
+                   <div class="mt-5">
+                       <div class="float-right mr-3">
+                           <span><img src="../../assets/newpics/sig2.png" style="height: 70px; width: 70px;" alt="" srcset="">
+                            <p class="ml-3">Miss.Rhoda<br><b>Head of Department</b></p>
+                        </span>
+                       </div>
+
+                       <div>
+                            <span><img src="../../assets/newpics/sig1.png" style="height: 70px; width: 70px;" alt="" srcset="">
+                                <p class="ml-3">Miss.Maryann<br><b>Head of school</b></p>
+                            </span>
+                       </div>
+                </div>
+
+                <div>
+                    <div class="row mx-auto justify-content-center">
+                        <button class="btn btn-sucess">ISSUE CERT!</button>
+                    </div>
+                </div>
+                </div>
+
+            </div> -->
+
+
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

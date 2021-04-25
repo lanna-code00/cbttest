@@ -1,0 +1,69 @@
+<div *ngIf="exam">
+  <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>{{courses}} <span class="ml-2">( {{topic}} )</span></span>
+    <span class="example-spacer"></span>
+    <div class="row mx-auto justify-content-center">
+        <button mat-button class="float-right"><b>{{counts | converter}}</b></button>
+    </div>
+
+  </mat-toolbar-row>
+  </mat-toolbar>
+<div *ngIf="noquestions" class="row justify-content-center mt-5 animate flip infinite">
+  <span><h1 >NO QUESTIONS AT THE MOMENT</h1></span>
+</div>
+
+<mat-horizontal-stepper #stepper *ngIf="answers" class="mt-4">
+  
+  <input type="text" name="" id="" [(ngModel)]="bindingadd">
+  <form [formGroup]="questionsForm">
+  <mat-step *ngFor="let ans of answers">
+  
+    <!-- <ng-template matStepLabel></ng-template> -->
+    <h4><strong>{{ans.question}}</strong></h4>
+    <mat-radio-group aria-label="Select an option" formControlName="q{{ans.id}}" class="example-radio-group">
+      <mat-radio-button [value]="ans.optionA">{{ans.optionA}}</mat-radio-button>
+      <mat-radio-button [value]="ans.optionB">{{ans.optionB}}</mat-radio-button>
+      <mat-radio-button [value]="ans.optionC">{{ans.optionC}}</mat-radio-button>
+      <mat-radio-button [value]="ans.optionD">{{ans.optionD}}</mat-radio-button>
+    </mat-radio-group>
+        
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+          
+        </div>
+        
+        
+      </mat-step>
+      </form>
+      
+    
+
+</mat-horizontal-stepper>
+
+<!-- <form [formGroup]="newform" novalidate  >
+        
+  <input hidden type="text" name="scores" formControlName="scores" id="" >
+  <input hidden type="text" name="course_id" formControlName="course_id" id="" >
+  <input hidden type="text" name="student_id" formControlName="student_id" id="" > -->
+<div>
+  <button type="submit" (click)="submitexam()" mat-button class="ml-5 btn-success mt-3">Submit</button>
+</div>
+
+</div>
+
+
+<div *ngIf="fail">
+  <app-submitted></app-submitted>
+</div>
+
+<div *ngIf="pass">
+  <app-retryexam></app-retryexam>
+</div>
+
+
+<!-- </form> -->
+
+
+

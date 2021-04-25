@@ -1,0 +1,122 @@
+<div class="container-fluid">
+  <div class="row mx-auto justify-content-center">
+      <h2 style="font-weight: 800;" class="mt-2">LIST OF BOOKS TO READ</h2>
+  </div>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card" style="background-color: #6d759b52">
+                <div class="card-content">
+                    <span class="card-title"><b>BASICS OF FINANCE</b></span>
+                    <div style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">This course illustrates the difference between benefits and features and how to effectively promote the advantages of
+                    products or services.</div>
+                </div>
+                <div class="card-action">
+                  <a class="waves-effect waves-light btn text-white" (click)="read_basics('basics')" >Read</a>
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-4">
+            <div class="card" style="background-color: #90525252 ">
+                <div class="card-content">
+                  <span class="card-title"><b>CASH FLOW</b></span>
+                  <div style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Here in this course, the importance of monitoring cash flow and making business decisions based on cash flow is explain.</div>
+                </div>
+                <div class="card-action">
+                  <a class="waves-effect waves-light btn" (click)="read_basics('cash')" style="color:rgb(127, 3, 165)">Read</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card" style="background-color: #f1bd1252 ">
+            <div class="card-content">
+              <span class="card-title"><b>MARKET BENEFITS</b></span>
+              <div style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">This course illustrates the difference between benefits and features and how to effectively promote the advantages of
+              products or services.</div>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn" (click)="read_basics('market')" style="color:rgb(127, 3, 165)">Read</a>
+            </div> 
+          </div>
+        </div>
+
+    </div>
+
+      <div class="row">
+      
+        <div class="col-md-6">
+          <div class="card" style="background-color: #45eb2f52 ">
+            <div class="card-content">
+              <span class="card-title"><b>PROFIT AND LOSS</b></span>
+              <div style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">H
+                This course examines the easily overlooked expenses that can affect profits and provides a spreadsheet to calculate a
+                business’s profit and losses
+              </div>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn" (click)="read_basics('profit')" style="color:rgb(127, 3, 165)">Read</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div class="card" style="background-color: #6d759b52">
+            <div class="card-content">
+              <span class="card-title"><b>SALES FORECASTING</b></span>
+              <div style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">The course explores how to gather information used to make a sales forecast. Factors that can affect sales forecast are
+              seasonal trends, market size
+              </div>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn" (click)="read_basics('sales')" style="color:rgb(127, 3, 165)">Read</a>
+            </div>
+          </div>
+        </div>
+    
+      
+      </div>
+
+        <div class="row">
+        
+          <div class="col-md-4">
+            <div class="card" style="background-color: #e6497d52 ">
+              <div class="card-content">
+                <span class="card-title"><b>SETTING PRICES</b></span>
+                <div style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">In the story line, Alejandro owns a café and is trying to decide if he should raise the price of his popular coffee.</div>
+              </div>
+              <div class="card-action">
+                <a class="waves-effect waves-light btn" (click)="read_basics('setting')" style="color:rgb(127, 3, 165)">Read</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-4">
+            <div class="card" style="background-color: #f1bd1252">
+              <div class="card-content">
+                <span class="card-title"><b>Unique Value Proposition</b></span>
+                <div style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">This course uses customers reviews of business and its competition to help pinpoint the business's unique value.</div>
+              </div>
+              <div class="card-action">
+                <a class="waves-effect waves-light btn" (click)="read_basics('unique')" style="color:rgb(127, 3, 165)">Read</a>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-md-4">
+              <div class="card" style="background-color:#45eb2f52">
+                <div class="card-content">
+                  <span class="card-title"><b>Your Target Audience</b></span>
+                  <div style=" overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">The story line is a about Paul and Loretta who owns a guesthouse and they are trying to understand who their customers</div>
+                </div>
+                <div class="card-action">
+                  <a class="waves-effect waves-light btn" (click)="read_basics('target')" style="color:rgb(127, 3, 165)">Read</a>
+                </div>
+              </div>
+            </div>
+        
+        </div>
+</div>
+
+<router-outlet></router-outlet>

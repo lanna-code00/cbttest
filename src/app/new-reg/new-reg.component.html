@@ -1,0 +1,95 @@
+<div class="container">
+    <form class="example-form animated fadeIn" [formGroup]="angForm" novalidate (ngSubmit)="postdata()">
+    <div class="row mx-auto justify-content-center  mt-1">
+        <div class="col-md-6">
+            <div class="card">
+                <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+                <div class="card-content">
+                    <h2 class="text-center text-danger mt-1 mb-1">SIGN UP</h2>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" value="" name="firstname" formControlName="firstname"
+                        [ngClass]="{ 'is-invalid': submitted && myfirstname.invalid }">
+                        <label for="last_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" value="" name="lastname" formControlName="lastname"
+                        [ngClass]="{ 'is-invalid': submitted && mylastname.invalid }">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" value="" name="surname" formControlName="surname"
+                        [ngClass]="{ 'is-invalid': submitted && mysurname.invalid }">
+                        <label for="last_name">Surname</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" value="" name="email" formControlName="email"
+                        [ngClass]="{ 'is-invalid': submitted && myemail.invalid }">
+                        <label for="last_name">E-mail</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" value="" name="username" formControlName="username"
+                        [ngClass]="{ 'is-invalid': submitted && myusername.invalid }">
+                        <label for="last_name">Username</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" value="" name="address" formControlName="address"
+                        [ngClass]="{ 'is-invalid': submitted && myaddress.invalid }">
+                        <label for="last_name">Home Address</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <mat-form-field appearance="fill" class="example-full-width">
+                            <mat-label class="text-black">Gender</mat-label>
+                            <mat-select class="text-white" name="gender" [ngClass]="{ 'is-invalid': submitted && mygender.invalid }"
+                                formControlName="gender">
+                                <mat-option *ngFor="let gs of gender" [value]="gs.value">
+                                    {{gs.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" value="" name="phone"
+                        formControlName="phone" [ngClass]="{ 'is-invalid': submitted && myphone.invalid }">
+                        <label for="last_name">Phone Number</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" value="" name="parentsname"
+                        formControlName="parentsname" [ngClass]="{ 'is-invalid': submitted && parentsname.invalid }">
+                        <label for="last_name">Parents/Guardian name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" value="" name="parentsno"
+                        formControlName="parentsno" [ngClass]="{ 'is-invalid': submitted && myparentsno.invalid }">
+                        <label for="last_name">Parents/Guardian phone number</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" type="password" value="" name="password"
+                        formControlName="password" [ngClass]="{ 'is-invalid': submitted && mypassword.invalid }">
+                        <label for="last_name">Password</label>
+                    </div>
+                </div>
+                <div class="row mx-auto justify-content-center">
+                    <button mat-button color="primary" type="submit">SignUp</button>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+    </form>
+
+</div>
+
+
+<div class="container">
+</div>

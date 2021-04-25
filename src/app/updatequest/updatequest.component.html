@@ -1,0 +1,76 @@
+        <div id="firstmodal" *ngIf="submitted">
+        <div class="container">
+             <div class="row mx-auto justify-content-center">
+              <div class="card">
+                  <div class="card-body">
+                    <h5 class="text-center mt-3 mb-3">EDIT QUESTION</h5>
+                <form [formGroup]="myquest" (submit)="update()">
+                 <input type="text" formControlName="quest_id" hidden name="quest_id">
+                     <div class="row">
+                
+                        <div class="col-md-12">
+                          <mat-form-field appearance="fill">
+                            <mat-label>Question</mat-label>
+                            <textarea matInput name="question" formControlName="question"></textarea>
+                          </mat-form-field>
+                        </div>
+                     </div>
+
+                     <div class="row">
+                      <div class="col-md-6">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Option A</mat-label>
+                          <textarea matInput name="optionA" formControlName="optionA"></textarea>
+                        </mat-form-field>
+                      </div>
+
+                      <div class="col-md-6">
+                        <mat-form-field appearance="fill">
+                          <mat-label>Option B</mat-label>
+                          <textarea matInput name="optionB" formControlName="optionB"></textarea>
+                        </mat-form-field>
+                      </div>
+                   </div>
+
+                   <div class="row">
+                    <div class="col-md-6">
+                      <mat-form-field appearance="fill">
+                        <mat-label>Option C</mat-label>
+                        <textarea matInput name="optionC" formControlName="optionC"></textarea>
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-md-6">
+                      <mat-form-field appearance="fill">
+                        <mat-label>Option D</mat-label>
+                        <textarea matInput name="optionD" formControlName="optionD"></textarea>
+                      </mat-form-field>
+                    </div>
+                 </div>
+
+                 <div class="row">
+                  <div class="col-md-6">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Correct Answer</mat-label>
+                      <textarea matInput name="correctans" formControlName="correctans"></textarea>
+                    </mat-form-field>
+                  </div>
+
+                  <div class="col-md-6">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Mark</mat-label>
+                      <textarea matInput name="marks" formControlName="marks"></textarea>
+                    </mat-form-field>
+                  </div>
+               </div>
+                     
+               <div class="mb-3">
+                <button mat-raised-button class="float-right" color="warn" (click)="hidequestiontable()"><span class="fa fa-times fa-2x"></span></button>
+                <button type="submit" mat-raised-button class="float-left" color="primary"><span class="fa fa-plus fa-2x"></span></button>
+               </div>
+              </form>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>

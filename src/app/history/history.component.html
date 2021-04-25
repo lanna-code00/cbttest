@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row mx-auto justify-content-center">
+        <div class="col-md-12">
+                <div >
+                        <table class="responsive-table highlight">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>QUESTION</th>
+                                    <th>OPTION A</th>
+                                    <th>OPTION B</th>
+                                    <th>OPTION C</th>
+                                    <th>OPTION D</th>
+                                    <th>CORRECT ANSWER</th>
+                                    <th>QUESTION ID</th>
+                                    <th>PASS MARK</th>
+                                    <th>RESTORE</th>
+                                    <th>REMOVE</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                <tr *ngFor="let item of historyArr let i = index">
+                                    <td>{{i + 1}}</td>
+                                    <td>{{item.question}}</td>
+                                    <td>{{item.optionA}}</td>
+                                    <td>{{item.optionB}}</td>
+                                    <td>{{item.optionC}}</td>
+                                    <td>{{item.optionD}}</td>
+                                    <td>{{item.correctans}}</td>
+                                    <td>{{item.course_id}}</td>
+                                    <td>{{item.pass_mark}}</td>
+                                    <td>
+                                        <button class="btn btn-secondary text-white" (click)="restoreData(item)" matTooltip="Restore question"><span class="fa fa-undo"></span></button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-danger text-white" matTooltip="Delete"><span class="fa fa-trash"></span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

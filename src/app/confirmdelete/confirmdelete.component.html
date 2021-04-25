@@ -1,0 +1,9 @@
+<div>
+    <mat-dialog-content style="font-weight: 800;" class="text-danger">
+            <p>ARE YOU SURE YOU WANT TO DELETE THIS QUESTION?</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close [routerLink]="['/adminsidebar/setquest']" routerLinkActive="router-link-active" >Cancel</button>
+        <button mat-button [mat-dialog-close]="true" (click)="confirmdel()" cdkFocusInitial>YES</button>
+    </mat-dialog-actions>
+</div>

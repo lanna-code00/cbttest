@@ -1,0 +1,189 @@
+<!-- <h2 mat-dialog-title class="text-center">ADD TUTOR</h2>
+<mat-dialog-content class="mat-typography">
+   
+   <form [formGroup]="angForm" (ngSubmit)="postdata()">
+
+
+   <div class="row">
+      <div class="col-md-6">
+      <p>
+          <mat-form-field class="example-full-width">
+              <mat-label>Tutor name</mat-label>
+              <input placeholder="name" name="name" formControlName="name" matInput>
+          </mat-form-field>
+      </p>
+      </div>
+      
+      <div class="col-md-6">
+      <p>
+          <mat-form-field class="example-full-width">
+              <mat-label>Course</mat-label>
+              <input placeholder="Maths" name="course" formControlName="course" matInput>
+          </mat-form-field>
+      </p>
+      </div>
+
+  </div>
+
+  <div class="row">
+   <div class="col-md-6">
+   <p>
+       <mat-form-field class="example-full-width">
+           <mat-label>No.of questions</mat-label>
+           <input placeholder="20" name="questNo" formControlName="questNo" matInput>
+       </mat-form-field>
+   </p>
+   </div>
+   
+   <div class="col-md-6">
+   <p>
+       <mat-form-field color="accent" class="example-full-width">
+         <mat-label>Date</mat-label>
+         <input matInput name="date" formControlName="date" placeholder="02/09/2020" [matDatepicker]="picker1">
+         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+         <mat-datepicker #picker1></mat-datepicker>
+       </mat-form-field>
+   </p>
+   </div>
+
+</div>
+
+<div class="row">
+   <div class="col-md-6">
+   <p>
+       <mat-form-field class="example-full-width">
+           <mat-label>Time</mat-label>
+           <input name="time" formControlName="time" matInput placeholder="07:00AM">
+       </mat-form-field>
+   </p>
+   </div>
+   
+   <div class="col-md-6">
+   <p>
+       <mat-form-field class="example-full-width">
+           <mat-label>Address 2</mat-label>
+           <input matInput placeholder="Ex. California">
+       </mat-form-field>
+   </p>
+   </div>
+
+</div>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button type="submit" mat-button [mat-dialog-close]="true" cdkFocusInitial>Add</button>
+</mat-dialog-actions>
+
+</form>
+
+</mat-dialog-content> -->
+
+<h2 mat-dialog-title class="text-center">ADD TUTOR</h2>
+<mat-dialog-content class="mat-typography">
+
+    <form [formGroup]="angForm" (ngSubmit)="postdata()">
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Firstname</mat-label>
+                        <input placeholder="Firstname" name="firstname" formControlName="firstname" matInput>
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <p>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Lastname</mat-label>
+                        <input placeholder="Lastname" name="lastname" formControlName="lastname" matInput>
+                    </mat-form-field>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Surname</mat-label>
+                                <input placeholder="Surname" name="surname" formControlName="surname" matInput>
+                            </mat-form-field>
+                        </p>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <p>
+                            <mat-form-field class="example-full-width">
+                                <mat-label>E-mail</mat-label>
+                                <input placeholder="E-mail" name="email" formControlName="email" matInput>
+                            </mat-form-field>
+                        </p>
+                    </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Phone Number</mat-label>
+                        <input placeholder="+2347055434256" name="phone" formControlName="phone" matInput>
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <p>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Course (Area of Expertise)</mat-label>
+                        <input placeholder="React" name="course" formControlName="course" matInput>
+                    </mat-form-field>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <p>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Identification</mat-label>
+                        <input placeholder="School ID" readonly autocomplete="off" name="identification" [(ngModel)]="schoolId" formControlName="identification"
+                            matInput>
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <p>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Tutor ID</mat-label>
+                        <input name="tutorid" autocomplete="off" readonly [(ngModel)]="randomId" formControlName="tutorid" matInput>
+                    </mat-form-field>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row mx-auto justify-content-center">
+            <div class="col-md-6">
+                <p>
+                    <!-- <mat-form-field class="example-full-width"> -->
+                    <button type="button" mat-button (click)="generateid()">Generate ID</button>
+                    <!-- </mat-form-field> -->
+                </p>
+            </div>
+        </div>
+
+        <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button type="submit" mat-button [mat-dialog-close]="true" cdkFocusInitial>Add</button>
+        </mat-dialog-actions>
+
+    </form>
+
+</mat-dialog-content>

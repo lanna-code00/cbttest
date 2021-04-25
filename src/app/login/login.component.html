@@ -1,0 +1,37 @@
+
+<div class="container">
+<div class="row mx-auto justify-content-center mt-5">
+  <div class="col-md-6">
+    <div class="card darken-1">
+      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+      <div class="card-content white-text">
+        <span class="card-title">Card Title</span>
+        <form class="py-4 p-5 example-form" novalidate [formGroup]="angForm" (ngSubmit)="postdata()">
+          <h2 class="text-center mb-4 text-danger" style="letter-spacing: 5px;">LOGIN</h2>
+          <div *ngIf="incorrect" class="card-header bg-danger text-center text-white mt-2 mb-3 animated fadeInUp">
+            <p class="mb-1 mt-1">Username or password is Incorrect</p>
+          </div>
+          <div class="input-group mb-5 mx-auto justify-content-center">
+            <mat-form-field class="example-full-width mb-5">
+              <mat-label>E-mail</mat-label>
+              <input matInput placeholder="E-mail" value="" style="color: black;" formControlName="email" name="email">
+            </mat-form-field>
+        
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Password" value="" style="color: black;" formControlName="password" name="password" type="password">
+            </mat-form-field>
+          </div>
+        
+          <div class="input-group mb-3 col-md-4 mx-auto justify-content-center">
+            <input type="submit" value="login" class="form-control bg-light"
+              style="width: 70px; height: 40px;font-size: 15px;border-radius: 50px;">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="mt-2" style="font-weight: 800; font-size: 20px;">Dashboard</div>
+    <div class="row mt-2">
+        <div class="col-md-4 mt-5">
+          <mat-card style="background-color: rgb(107, 4, 121);" class="shadow">
+               <div class="mt-2">
+                    <h2 class="text-white">Student Board</h2>
+               </div>
+               <span class="fa fa-chart-bar fa-2x text-white"> <span class="ml-3">{{certcount}}</span></span>
+          </mat-card>
+        </div>
+
+      <div class="col-md-4 mt-5">
+        <mat-card style="background-color:  rgb(246, 230, 3);" class="shadow">
+          <div class="mt-2">
+            <h2 class="">Total Past Questions</h2>
+          </div>
+          <span class="fa fa-chart-area fa-2x"> <span class="ml-3">{{no_Of_quest}}</span></span>
+        </mat-card>
+      </div>
+
+      <div class="col-md-4 mt-5">
+        <mat-card style="background-color: rgb(21, 143, 5);" class="shadow">
+          <div class="mt-2">
+            <h2 class="text-white">Pending Questions</h2>
+          </div>
+          <span class="fa fa-chart-pie fa-2x text-white"> <span class="ml-3">{{questcount}}</span></span>
+        </mat-card>
+      </div>
+       
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <mat-card class="shadow">
+          <app-adminchart></app-adminchart>
+        </mat-card>
+      </div>
+    </div>
+</div>
+

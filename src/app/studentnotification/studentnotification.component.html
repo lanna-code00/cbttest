@@ -1,0 +1,17 @@
+<div *ngIf="cert">
+    <div class="container">
+        <div class="row mx-auto justify-content-center">
+            <div class="col-md-6" *ngFor="let result of students_result">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../../assets/newpics/HP_Life Cert_331024_1.png">
+                        <span class="card-title" style="color: black; font-size: 10px; top: 65px; left: 185px;">{{result.firstname | uppercase}} {{result.lastname | uppercase}} {{result.surname | uppercase}}</span>
+
+                        <span class="card-title" style="color: black; font-size: 9px; top: 65px; left: 383px;">{{result.dates | date:'fullDate'}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
