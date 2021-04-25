@@ -23,9 +23,9 @@ languages = this.getcourse();
  newstr: String
 
  redirectUrl: string;
-  // baseUrl = 'newcbt2/';
   public arr = [];
-  baseUrl:string = 'http://localhost/newcbt/src/assets/newcbt2';
+  baseUrl:string = 'http://localhost/newcbt2';
+  // baseUrl:string = 'http://localhost/newcbt/src/assets/newcbt2';
   withCredentials = true;
  @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
   constructor(private httpClient: HttpClient) { }

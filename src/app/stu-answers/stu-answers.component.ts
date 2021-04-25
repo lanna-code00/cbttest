@@ -124,7 +124,7 @@ export class StuAnswersComponent implements OnInit {
     setTimeout(() => {
       this.dialog.closeAll()
       if (myx <= x) {
-         let base = 'http://localhost/newcbt/src/assets/newcbt2/studentscore.php';
+         let base = 'http://localhost/newcbt2/studentscore.php';
            this.http.post(base, scoreobj).subscribe(data => {
              console.log(data);
             })
